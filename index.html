@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard Comercial - Mutual 22 de Septiembre</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="data.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="brand-mark">
+        <img src="logo-mutual-22.jpg" alt="Logo Asociación Mutual 22 de Septiembre">
+      </div>
+      <div class="hero__copy">
+        <p class="eyebrow">Mutual 22 de Septiembre</p>
+        <h1>Dashboard Comercial - Mutual 22 de Septiembre</h1>
+        <p>Análisis de ventas y comisiones - Mayo vs Junio</p>
+      </div>
+      <div class="hero__meta">
+        <span id="lastUpdate">Última actualización</span>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="filter-bar" aria-label="Filtros superiores">
+        <div class="filter-card date-filter">
+          <span class="filter-label">Período</span>
+          <div class="date-row">
+            <input id="startDate" type="date">
+            <input id="endDate" type="date">
+          </div>
+        </div>
+        <div id="filterControls" class="filter-controls"></div>
+        <button id="clearFilters" class="primary-action" type="button">Limpiar filtros</button>
+      </section>
+
+      <section class="quality-strip" id="qualityStrip"></section>
+      <section class="kpi-grid" id="kpiGrid" aria-label="KPIs principales"></section>
+
+      <section class="section-title">
+        <div>
+          <p class="eyebrow">Ventas</p>
+          <h2>Análisis comercial principal</h2>
+        </div>
+        <span id="recordCount" class="soft-pill">0 registros</span>
+      </section>
+
+      <section class="chart-grid">
+        <article class="panel wide">
+          <div class="panel-head">
+            <h3>Evolución diaria de ventas</h3>
+            <span>Mayo vs Junio</span>
+          </div>
+          <div id="dailyChart" class="chart"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Producción por línea</h3>
+            <span>Monto y participación</span>
+          </div>
+          <div id="lineChart" class="compare-list"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Producción por afinidad</h3>
+            <span>Monto y participación</span>
+          </div>
+          <div id="affinityChart" class="compare-list"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Top vendedores por monto</h3>
+            <span>Ranking visual</span>
+          </div>
+          <div id="sellerRankChart" class="compare-list"></div>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Participación por vendedor</h3>
+            <span>Share total</span>
+          </div>
+          <div id="sellerShareChart" class="donut-wrap"></div>
+        </article>
+        <article class="panel wide">
+          <div class="panel-head">
+            <h3>Evolución acumulada del mes</h3>
+            <span>Run rate</span>
+          </div>
+          <div id="cumulativeChart" class="chart"></div>
+        </article>
+      </section>
+
+      <section class="commission-block">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Comisiones Comerciales</p>
+            <h2>Objetivos, exclusiones y proyección</h2>
+          </div>
+        </div>
+        <div class="commission-kpis" id="commissionKpis"></div>
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Tabla de comisiones por vendedor</h3>
+            <span>Reglas mensuales</span>
+          </div>
+          <div class="table-scroll">
+            <table id="commissionTable" class="data-table"></table>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Simulador / proyección al cierre</h3>
+            <span>Ritmo diario actual</span>
+          </div>
+          <div id="projectionTable" class="projection-grid"></div>
+        </div>
+      </section>
+
+      <section class="section-title">
+        <div>
+          <p class="eyebrow">Insights clave</p>
+          <h2>Conclusiones automáticas</h2>
+        </div>
+      </section>
+      <section id="insights" class="insight-grid"></section>
+
+      <section class="section-title">
+        <div>
+          <p class="eyebrow">Operaciones</p>
+          <h2>Tabla filtrable</h2>
+        </div>
+        <div class="table-tools">
+          <input id="tableSearch" type="search" placeholder="Buscar operación">
+          <button id="exportCsv" class="secondary-action" type="button">Exportar CSV</button>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="table-scroll">
+          <table id="operationsTable" class="data-table"></table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Copyright © Mutual 22 de Septiembre.</p>
+      <p>Dashboard desarrollado por Mariana Tobares.</p>
+    </footer>
+  </body>
+</html>
