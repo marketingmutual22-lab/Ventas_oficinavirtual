@@ -107,7 +107,7 @@ button, input { font: inherit; }
 
 .filter-controls {
   display: grid;
-  grid-template-columns: repeat(4, minmax(145px, 1fr));
+  grid-template-columns: repeat(5, minmax(135px, 1fr));
   gap: 10px;
 }
 
@@ -425,6 +425,44 @@ button, input { font: inherit; }
   border-radius: 50%;
 }
 
+.operations-close-block {
+  margin-top: 30px;
+  padding: 18px;
+  background: #f2f7f7;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.operations-close-block .section-title { margin-top: 0; }
+
+.operations-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(145px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.single-bars {
+  display: grid;
+  gap: 12px;
+}
+
+.single-bar-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) minmax(190px, 2fr) minmax(120px, auto);
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.single-bar-row .track {
+  height: 12px;
+}
+
+.compact-table {
+  min-width: 650px;
+}
+
 .commission-block {
   margin-top: 30px;
   padding: 18px;
@@ -557,7 +595,7 @@ button, input { font: inherit; }
 @media (max-width: 1180px) {
   .hero, .filter-bar { grid-template-columns: 1fr; }
   .hero__meta { text-align: left; }
-  .filter-controls, .kpi-grid, .commission-kpis, .projection-grid, .quality-strip {
+  .filter-controls, .kpi-grid, .commission-kpis, .projection-grid, .quality-strip, .operations-kpis {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -565,10 +603,10 @@ button, input { font: inherit; }
 @media (max-width: 760px) {
   .page { padding: 16px; }
   .hero { padding: 20px; }
-  .chart-grid, .filter-controls, .kpi-grid, .commission-kpis, .projection-grid, .quality-strip, .insight-grid {
+  .chart-grid, .filter-controls, .kpi-grid, .commission-kpis, .projection-grid, .quality-strip, .insight-grid, .operations-kpis {
     grid-template-columns: 1fr;
   }
-  .compare-row, .donut-wrap { grid-template-columns: 1fr; }
+  .compare-row, .single-bar-row, .donut-wrap { grid-template-columns: 1fr; }
   .compare-value { text-align: left; }
   .section-title, .table-tools {
     align-items: stretch;
@@ -581,10 +619,10 @@ button, input { font: inherit; }
     <script>
 window.DASHBOARD_DATA = {
   "metadata": {
-    "generatedAt": "2026-06-23T19:37:52",
+    "generatedAt": "2026-07-01T17:21:22",
     "sourceFiles": {
       "Mayo": "C:\\Users\\maryt\\OneDrive\\Desktop\\ARCHIVOS- 2026\\BBDD- VENTAS MAYO.xlsx",
-      "Junio": "C:\\Users\\maryt\\Downloads\\Control_de_Ventas_y_Creditos Generales- Junio 2026 (3).xlsx"
+      "Junio": "C:\\Users\\maryt\\Downloads\\Control_de_Ventas_y_Creditos Generales- Junio 2026 (4).xlsx"
     },
     "objectives": {
       "Alex Luna": 5000000,
@@ -629,51 +667,51 @@ window.DASHBOARD_DATA = {
           }
         },
         "Junio": {
-          "operations": 77,
-          "amount": 111122578.0,
-          "ticket": 1443150.3636363635,
-          "uniqueMembers": 77,
-          "dailyAverage": 6536622.235294118,
+          "operations": 94,
+          "amount": 138587615.0,
+          "ticket": 1474336.329787234,
+          "uniqueMembers": 94,
+          "dailyAverage": 6599410.238095238,
           "activeSellers": 4,
           "topSeller": {
             "name": "Alex Luna",
-            "amount": 36253655.0
+            "amount": 38077307.0
           },
           "topLine": {
             "name": "128 Celesol c/ Situaciones",
-            "amount": 34000000.0
+            "amount": 35500000.0
           },
           "topAffinity": {
             "name": "Empleados Públicos",
-            "amount": 85150000.0
+            "amount": 110100000.0
           }
         }
       },
       "overall": {
-        "operations": 154,
-        "amount": 187590987.0,
-        "uniqueMembers": 154,
+        "operations": 171,
+        "amount": 215056024.0,
+        "uniqueMembers": 171,
         "activeSellers": 4,
         "bestSeller": {
           "name": "Alex Luna",
-          "amount": 69975682.0
+          "amount": 71799334.0
         },
         "topLine": {
           "name": "128 Celesol c/ Situaciones",
-          "amount": 34000000.0
+          "amount": 35500000.0
         },
         "topAffinity": {
           "name": "Empleados Públicos",
-          "amount": 119850000.0
+          "amount": 144800000.0
         }
       }
     },
     "comparison": {
-      "operationsVariation": 0.0,
-      "amountVariation": 0.4531828169721695,
-      "ticketVariation": 0.4531828169721694,
-      "amountDelta": 34654169.0,
-      "operationsDelta": 0
+      "operationsVariation": 0.22077922077922077,
+      "amountVariation": 0.8123512285968968,
+      "ticketVariation": 0.4845855808719261,
+      "amountDelta": 62119206.0,
+      "operationsDelta": 17
     },
     "commission": [
       {
@@ -723,52 +761,52 @@ window.DASHBOARD_DATA = {
       {
         "period": "Junio",
         "seller": "Alex Luna",
-        "commissionableSales": 30950000.0,
-        "excludedSales": 5303655.0,
+        "commissionableSales": 32450000.0,
+        "excludedSales": 5627307.0,
         "objective": 5000000,
-        "achievement": 6.19,
+        "achievement": 6.49,
         "gap": 0,
-        "commission": 928500.0,
+        "commission": 973500.0,
         "status": "Objetivo cumplido"
       },
       {
         "period": "Junio",
         "seller": "Belén Toledo",
-        "commissionableSales": 17750000.0,
+        "commissionableSales": 28500000.0,
         "excludedSales": 3653434.0,
         "objective": 5000000,
-        "achievement": 3.55,
+        "achievement": 5.7,
         "gap": 0,
-        "commission": 532500.0,
+        "commission": 855000.0,
         "status": "Objetivo cumplido"
       },
       {
         "period": "Junio",
         "seller": "Darío Díaz",
-        "commissionableSales": 19570000.0,
-        "excludedSales": 3589514.0,
+        "commissionableSales": 28170000.0,
+        "excludedSales": 4550899.0,
         "objective": 5000000,
-        "achievement": 3.914,
+        "achievement": 5.634,
         "gap": 0,
-        "commission": 587100.0,
+        "commission": 845100.0,
         "status": "Objetivo cumplido"
       },
       {
         "period": "Junio",
         "seller": "Valentina Chanquia",
-        "commissionableSales": 25500000.0,
+        "commissionableSales": 30830000.0,
         "excludedSales": 4805975.0,
         "objective": 7000000,
-        "achievement": 3.642857142857143,
+        "achievement": 4.404285714285714,
         "gap": 0,
-        "commission": 765000.0,
+        "commission": 924900.0,
         "status": "Objetivo cumplido"
       }
     ],
     "quality": {
-      "rawRecords": 192,
-      "dedupedRecords": 155,
-      "analyticsRecords": 154,
+      "rawRecords": 209,
+      "dedupedRecords": 172,
+      "analyticsRecords": 171,
       "duplicatesDetected": 37,
       "duplicateRule": "periodo + fecha + vendedor + DNI + importe + línea",
       "duplicates": [
@@ -1002,9 +1040,9 @@ window.DASHBOARD_DATA = {
         }
       },
       "decisions": [
-        "Junio fue recalculado con el archivo Control_de_Ventas_y_Creditos Generales- Junio 2026 (2).xlsx.",
+        "Junio fue recalculado con el archivo Control_de_Ventas_y_Creditos Generales- Junio 2026 (4).xlsx.",
         "Carina fue excluida del dataset analítico completo por requerimiento.",
-        "Proveedor se completa como Sin dato por ausencia de columna confiable.",
+        "Canal de origen se completa con Origen Consulta cuando existe; si falta, se muestra como Sin dato.",
         "Provincia y localidad quedan fuera del dashboard por requerimiento."
       ]
     }
@@ -1024,6 +1062,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 620000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1047,6 +1086,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1020000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1070,6 +1110,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 170000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1093,6 +1134,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 150000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1116,6 +1158,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cordoba",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 300000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1139,6 +1182,7 @@ window.DASHBOARD_DATA = {
       "province": "Santa Fe",
       "locality": "Santa Fe",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 427246.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1162,6 +1206,7 @@ window.DASHBOARD_DATA = {
       "province": "Santiago del Estero",
       "locality": "Santiago del Estero",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1401713.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1185,6 +1230,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1500000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1208,6 +1254,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 600000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1231,6 +1278,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2330000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1254,6 +1302,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 130000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1277,6 +1326,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 880000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1300,6 +1350,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cruz del Eje",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 100000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1323,6 +1374,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Jesus Maria",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 820000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1346,6 +1398,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 230000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1369,6 +1422,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 700000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1392,6 +1446,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1800000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1415,6 +1470,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1500000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1438,6 +1494,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 100000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1461,6 +1518,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 670000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1484,6 +1542,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 100000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1507,6 +1566,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Villa Dolores",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 800000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1530,6 +1590,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2000000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1553,6 +1614,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 100000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1576,6 +1638,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 180000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1599,6 +1662,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cruz del Eje",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1800000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1622,6 +1686,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cruz del Eje",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2300000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1645,6 +1710,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 870000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1668,6 +1734,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2730000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1691,6 +1758,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 780000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1714,6 +1782,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 100000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1737,6 +1806,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 150000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1760,6 +1830,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 110000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1783,6 +1854,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 710000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1806,6 +1878,7 @@ window.DASHBOARD_DATA = {
       "province": "Nacion",
       "locality": "Rio Negro",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 712007.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1829,6 +1902,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 870000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1852,6 +1926,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 650000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1875,6 +1950,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 450000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1898,6 +1974,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Villa Dolores",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2700000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1921,6 +1998,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cruz del Eje",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2600000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1944,6 +2022,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cruz del Eje",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2000000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1967,6 +2046,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 780000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -1990,6 +2070,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 730000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2013,6 +2094,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cordoba",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 500000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2036,6 +2118,7 @@ window.DASHBOARD_DATA = {
       "province": "Nacion",
       "locality": "Buenos Aires",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 283395.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2059,6 +2142,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Villa de Soto",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2300000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2082,6 +2166,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1000000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2105,6 +2190,7 @@ window.DASHBOARD_DATA = {
       "province": "Nacion",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 713135.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2128,6 +2214,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cordoba",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 3300000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2151,6 +2238,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cordoba",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2300000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2174,6 +2262,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Santa Maria de Punilla",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 700000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2197,6 +2286,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 130000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2220,6 +2310,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1100000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2243,6 +2334,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 130000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2266,6 +2358,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 740000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2289,6 +2382,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "San Marcos Sierra",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 750000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2312,6 +2406,7 @@ window.DASHBOARD_DATA = {
       "province": "Macro",
       "locality": "Entre Rios",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 938078.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2335,6 +2430,7 @@ window.DASHBOARD_DATA = {
       "province": "Provincia Bs As",
       "locality": "Buenos Aires",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 300216.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2358,6 +2454,7 @@ window.DASHBOARD_DATA = {
       "province": "Nacion",
       "locality": "Chaco",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 738267.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2381,6 +2478,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cordoba",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1835280.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2404,6 +2502,7 @@ window.DASHBOARD_DATA = {
       "province": "Nacion",
       "locality": "Chaco",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 908403.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2427,6 +2526,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cordoba",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2000000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2450,6 +2550,7 @@ window.DASHBOARD_DATA = {
       "province": "Santander",
       "locality": "Cordoba",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 500000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2473,6 +2574,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cordoba",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1900000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2496,6 +2598,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "las Playas",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1000000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2519,6 +2622,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Villa Dolores",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 800000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2542,6 +2646,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cruz del Eje",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 600000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2565,6 +2670,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Villa de Soto",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 500000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2588,6 +2694,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cruz del Eje",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 4850000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2611,6 +2718,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "El Brete",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1000000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2634,6 +2742,7 @@ window.DASHBOARD_DATA = {
       "province": "Santander",
       "locality": "San Juan",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 908642.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2657,6 +2766,7 @@ window.DASHBOARD_DATA = {
       "province": "Formosa",
       "locality": "Formosa",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1122027.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2680,6 +2790,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cruz del Eje",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 700000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2703,6 +2814,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cordoba",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 500000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2726,6 +2838,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cordoba",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 550000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2749,6 +2862,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cordoba",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1000000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2772,6 +2886,7 @@ window.DASHBOARD_DATA = {
       "province": "Cordoba",
       "locality": "Cruz del Eje",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 200000.0,
       "status": "Sin Dato",
       "commissionEligibleSeller": true,
@@ -2795,6 +2910,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1350000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -2817,7 +2933,8 @@ window.DASHBOARD_DATA = {
       "line": "Aginco",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 670000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -2840,7 +2957,8 @@ window.DASHBOARD_DATA = {
       "line": "Coop de la Plata",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 874197.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -2863,7 +2981,8 @@ window.DASHBOARD_DATA = {
       "line": "Coop de la Plata",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 503888.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -2887,6 +3006,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1200000.0,
       "status": "Paralelo",
       "commissionEligibleSeller": true,
@@ -2910,6 +3030,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1000000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -2933,6 +3054,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2900000.0,
       "status": "Paralelo",
       "commissionEligibleSeller": true,
@@ -2955,7 +3077,8 @@ window.DASHBOARD_DATA = {
       "line": "128 Celesol c/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 500000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -2979,6 +3102,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 4000000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3001,7 +3125,8 @@ window.DASHBOARD_DATA = {
       "line": "127 Celesol s/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 1400000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3025,6 +3150,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1000000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3048,6 +3174,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 900000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3070,7 +3197,8 @@ window.DASHBOARD_DATA = {
       "line": "145 Alboreo- Renovación",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 3900000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3093,7 +3221,8 @@ window.DASHBOARD_DATA = {
       "line": "128 Celesol c/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 3100000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3116,7 +3245,8 @@ window.DASHBOARD_DATA = {
       "line": "134 Alboreo S / Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 500000.0,
       "status": "Paralelo",
       "commissionEligibleSeller": true,
@@ -3139,7 +3269,8 @@ window.DASHBOARD_DATA = {
       "line": "129 Mutual 22 c/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 200000.0,
       "status": "Paralelo",
       "commissionEligibleSeller": true,
@@ -3163,6 +3294,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2000000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3185,7 +3317,8 @@ window.DASHBOARD_DATA = {
       "line": "Coop de la Plata",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Bot",
+      "originChannel": "Bot",
       "amount": 962522.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3209,6 +3342,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1800000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3231,7 +3365,8 @@ window.DASHBOARD_DATA = {
       "line": "Coop de la Plata",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 960396.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3255,6 +3390,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1500000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3278,6 +3414,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1000000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3301,6 +3438,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1900000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3324,6 +3462,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 800000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3347,6 +3486,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1200000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3369,7 +3509,8 @@ window.DASHBOARD_DATA = {
       "line": "128 Celesol c/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 1300000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3392,7 +3533,8 @@ window.DASHBOARD_DATA = {
       "line": "127 Celesol s/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 2000000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3415,7 +3557,8 @@ window.DASHBOARD_DATA = {
       "line": "128 Celesol c/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 1000000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3439,6 +3582,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 700000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3462,6 +3606,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 600000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3484,7 +3629,8 @@ window.DASHBOARD_DATA = {
       "line": "128 Celesol c/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 1000000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3507,7 +3653,8 @@ window.DASHBOARD_DATA = {
       "line": "128 Celesol c/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 1600000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3530,7 +3677,8 @@ window.DASHBOARD_DATA = {
       "line": "128 Celesol c/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 3100000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3545,7 +3693,7 @@ window.DASHBOARD_DATA = {
       "period": "Junio",
       "sourceSheet": "Datos de Ventas- Junio2026",
       "sourceRow": 37,
-      "date": "2026-09-10",
+      "date": "2026-06-10",
       "seller": "Valentina Chanquia",
       "dni": "38883686",
       "client": "Ibarra Selene Antonella",
@@ -3554,6 +3702,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 3500000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3576,7 +3725,8 @@ window.DASHBOARD_DATA = {
       "line": "141 - Mutual 22 - Especial Renovación",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 600000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3599,7 +3749,8 @@ window.DASHBOARD_DATA = {
       "line": "130 Mutual 22 s/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 500000.0,
       "status": "Paralelo",
       "commissionEligibleSeller": true,
@@ -3623,6 +3774,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 300000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3645,7 +3797,8 @@ window.DASHBOARD_DATA = {
       "line": "Krg",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 600000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3669,6 +3822,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 3298353.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3691,7 +3845,8 @@ window.DASHBOARD_DATA = {
       "line": "Aginco",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 600000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3714,7 +3869,8 @@ window.DASHBOARD_DATA = {
       "line": "Coop de la Plata",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Bot",
+      "originChannel": "Bot",
       "amount": 721099.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3737,7 +3893,8 @@ window.DASHBOARD_DATA = {
       "line": "127 Celesol s/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 3400000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3760,7 +3917,8 @@ window.DASHBOARD_DATA = {
       "line": "Ayuda Económica 4",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 1200000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -3783,7 +3941,8 @@ window.DASHBOARD_DATA = {
       "line": "Coop de la Plata",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 1401510.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3806,7 +3965,8 @@ window.DASHBOARD_DATA = {
       "line": "Ayuda Económica 4",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 750000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3830,6 +3990,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1100000.0,
       "status": "Paralelo",
       "commissionEligibleSeller": true,
@@ -3852,7 +4013,8 @@ window.DASHBOARD_DATA = {
       "line": "129 Mutual 22 c/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 1500000.0,
       "status": "Paralelo",
       "commissionEligibleSeller": true,
@@ -3876,6 +4038,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1000000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3898,7 +4061,8 @@ window.DASHBOARD_DATA = {
       "line": "127 Celesol s/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Bot",
+      "originChannel": "Bot",
       "amount": 1400000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3922,6 +4086,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 805678.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3945,6 +4110,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 4000297.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3967,7 +4133,8 @@ window.DASHBOARD_DATA = {
       "line": "127 Celesol s/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 1450000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -3991,6 +4158,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1500000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4014,6 +4182,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 600000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4036,7 +4205,8 @@ window.DASHBOARD_DATA = {
       "line": "141 - Mutual 22 - Especial Renovación",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 1100000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -4060,6 +4230,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 2700000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -4083,6 +4254,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1100000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4106,6 +4278,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1500000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4129,6 +4302,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1400000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4152,6 +4326,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 3500000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4174,7 +4349,8 @@ window.DASHBOARD_DATA = {
       "line": "130 Mutual 22 s/ Situaciones",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 550000.0,
       "status": "Paralelo",
       "commissionEligibleSeller": true,
@@ -4197,7 +4373,8 @@ window.DASHBOARD_DATA = {
       "line": "141 - Mutual 22 - Especial Renovación",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 3200000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -4221,6 +4398,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1800000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4244,6 +4422,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 500000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4267,6 +4446,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 500000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4290,6 +4470,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1710349.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4313,6 +4494,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 4000000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4336,6 +4518,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 800000.0,
       "status": "Paralelo",
       "commissionEligibleSeller": true,
@@ -4358,8 +4541,9 @@ window.DASHBOARD_DATA = {
       "line": "Coop de la Plata",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
-      "amount": 786845.0,
+      "provider": "Bot",
+      "originChannel": "Bot",
+      "amount": 803766.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
       "commissionExcluded": true,
@@ -4381,7 +4565,8 @@ window.DASHBOARD_DATA = {
       "line": "Coop de la Plata",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Bot",
+      "originChannel": "Bot",
       "amount": 526962.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4405,6 +4590,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1300000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4428,6 +4614,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 355081.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4451,6 +4638,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1500000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4474,6 +4662,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 1500000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4496,7 +4685,8 @@ window.DASHBOARD_DATA = {
       "line": "Celesol - Cancelación Especial",
       "province": "Sin Dato",
       "locality": "Sin Dato",
-      "provider": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
       "amount": 1800000.0,
       "status": "Renovacion",
       "commissionEligibleSeller": true,
@@ -4520,6 +4710,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 445401.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4543,6 +4734,7 @@ window.DASHBOARD_DATA = {
       "province": "Sin Dato",
       "locality": "Sin Dato",
       "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
       "amount": 900000.0,
       "status": "Nuevo",
       "commissionEligibleSeller": true,
@@ -4550,6 +4742,414 @@ window.DASHBOARD_DATA = {
       "commissionable": true,
       "commissionStatus": "Comisionable",
       "estimatedCommission": 27000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-81",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 81,
+      "date": "2026-06-24",
+      "seller": "Alex Luna",
+      "dni": "24653205",
+      "client": "Valdez Mercado Sergio Ariel Roman",
+      "affinity": "Empleados Públicos",
+      "line": "128 Celesol c/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
+      "amount": 1500000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 45000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-82",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 82,
+      "date": "2026-06-24",
+      "seller": "Darío Díaz",
+      "dni": "31813120",
+      "client": "Prado Omar Rolando",
+      "affinity": "Empleados Públicos",
+      "line": "129 Mutual 22 c/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
+      "amount": 1800000.0,
+      "status": "Paralelo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 54000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-83",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 83,
+      "date": "2026-06-24",
+      "seller": "Belén Toledo",
+      "dni": "32313694",
+      "client": "Gaston Exequiel, Rivadero,",
+      "affinity": "Empleados Públicos",
+      "line": "130 Mutual 22 s/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
+      "amount": 550000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 16500.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-84",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 84,
+      "date": "2026-06-25",
+      "seller": "Darío Díaz",
+      "dni": "10484575",
+      "client": "Ibañez Gladis",
+      "affinity": "Jub. Nacional - Coop La Plata",
+      "line": "Coop de la Plata",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
+      "amount": 944464.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": true,
+      "commissionable": false,
+      "commissionStatus": "Excluida por Cooperativa",
+      "estimatedCommission": 0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-85",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 85,
+      "date": "2026-06-25",
+      "seller": "Valentina Chanquia",
+      "dni": "6175166",
+      "client": "Romero Transita Esther",
+      "affinity": "Jubilado Nacional",
+      "line": "Aginco",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
+      "amount": 500000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 15000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-86",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 86,
+      "date": "2026-06-26",
+      "seller": "Darío Díaz",
+      "dni": "23287994",
+      "client": "Oviedo Karina Viviana",
+      "affinity": "Empleados Públicos",
+      "line": "129 Mutual 22 c/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Bot",
+      "originChannel": "Bot",
+      "amount": 1200000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 36000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-87",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 87,
+      "date": "2026-06-26",
+      "seller": "Belén Toledo",
+      "dni": "17384107",
+      "client": "Rivero,jorge Omar",
+      "affinity": "Empleados Públicos",
+      "line": "Celesol - Cancelación Especial",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
+      "amount": 1800000.0,
+      "status": "Renovacion",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 54000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-88",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 88,
+      "date": "2026-06-26",
+      "seller": "Alex Luna",
+      "dni": "13722369",
+      "client": "Rizzi Mirta Ana",
+      "affinity": "Jub. Nacional - Coop La Plata",
+      "line": "Coop de la Plata",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Bot",
+      "originChannel": "Bot",
+      "amount": 323652.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": true,
+      "commissionable": false,
+      "commissionStatus": "Excluida por Cooperativa",
+      "estimatedCommission": 0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-89",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 89,
+      "date": "2026-06-26",
+      "seller": "Valentina Chanquia",
+      "dni": "16072712",
+      "client": "Ibarra Mercedes Javier",
+      "affinity": "Jubilado Nacional",
+      "line": "Aginco",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
+      "amount": 730000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 21900.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-90",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 90,
+      "date": "2026-06-26",
+      "seller": "Belén Toledo",
+      "dni": "26903557",
+      "client": "Garuti, Maria de los Angeles",
+      "affinity": "Empleados Públicos",
+      "line": "130 Mutual 22 s/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
+      "amount": 4000000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 120000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-91",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 91,
+      "date": "2026-06-26",
+      "seller": "Belén Toledo",
+      "dni": "36357028",
+      "client": "Leiva, Pablo Dario",
+      "affinity": "Empleados Públicos",
+      "line": "130 Mutual 22 s/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
+      "amount": 3200000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 96000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-92",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 92,
+      "date": "2026-06-29",
+      "seller": "Darío Díaz",
+      "dni": "39542679",
+      "client": "Finchel Eric Simon",
+      "affinity": "Empleados Públicos",
+      "line": "130 Mutual 22 s/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
+      "amount": 1200000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 36000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-93",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 93,
+      "date": "2026-06-29",
+      "seller": "Darío Díaz",
+      "dni": "38502791",
+      "client": "Garcia Leonardo",
+      "affinity": "Empleados Públicos",
+      "line": "129 Mutual 22 c/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
+      "amount": 1700000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 51000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-94",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 94,
+      "date": "2026-06-29",
+      "seller": "Valentina Chanquia",
+      "dni": "40419903",
+      "client": "Carnero Diego Ezequiel",
+      "affinity": "Empleados Públicos",
+      "line": "130 Mutual 22 s/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
+      "amount": 2500000.0,
+      "status": "Renovacion",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 75000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-95",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 95,
+      "date": "2026-06-30",
+      "seller": "Valentina Chanquia",
+      "dni": "24851034",
+      "client": "Lescano Ileana Veronica",
+      "affinity": "Empleados Públicos",
+      "line": "130 Mutual 22 s/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Sin Dato",
+      "originChannel": "Sin Dato",
+      "amount": 1600000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 48000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-96",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 96,
+      "date": "2026-06-30",
+      "seller": "Darío Díaz",
+      "dni": "23977600",
+      "client": "Gil Guillermo Miguel",
+      "affinity": "Empleados Públicos",
+      "line": "127 Celesol s/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Whatsapp",
+      "originChannel": "Whatsapp",
+      "amount": 2700000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 81000.0,
+      "duplicate": false
+    },
+    {
+      "id": "JUN-Datos de Ventas- Junio2026-97",
+      "period": "Junio",
+      "sourceSheet": "Datos de Ventas- Junio2026",
+      "sourceRow": 97,
+      "date": "2026-06-30",
+      "seller": "Belén Toledo",
+      "dni": "42382345",
+      "client": "Manzanelli Barrera Brian Joel",
+      "affinity": "Empleados Públicos",
+      "line": "130 Mutual 22 s/ Situaciones",
+      "province": "Sin Dato",
+      "locality": "Sin Dato",
+      "provider": "Bot",
+      "originChannel": "Bot",
+      "amount": 1200000.0,
+      "status": "Nuevo",
+      "commissionEligibleSeller": true,
+      "commissionExcluded": false,
+      "commissionable": true,
+      "commissionStatus": "Comisionable",
+      "estimatedCommission": 36000.0,
       "duplicate": false
     }
   ]
@@ -4573,6 +5173,7 @@ const FILTERS = [
   ["seller", "Vendedor"],
   ["line", "Línea de crédito"],
   ["affinity", "Grupo de afinidad"],
+  ["provider", "Canal de origen"],
   ["status", "Estado"],
 ];
 const PALETTE = ["#147a57", "#216b9b", "#b7791f", "#546a76", "#6f8d58", "#b42318", "#7a6a9b"];
@@ -4793,6 +5394,7 @@ function updateDashboard() {
   renderQualityStrip();
   renderKpis(rows);
   renderSalesCharts(rows);
+  renderJuneOperationsClose(rows);
   renderCommissionModule(rows);
   renderInsights(rows);
   renderOperationsTable(rows);
@@ -4804,7 +5406,7 @@ function renderQualityStrip() {
     `Registros analíticos: ${formatNumber(q.analyticsRecords || records.length)}.`,
     `Duplicados excluidos: ${formatNumber(q.duplicatesDetected || 0)}.`,
     "Provincia y localidad fueron retiradas del análisis por requerimiento.",
-    "Proveedor faltante se informa como Sin dato cuando no existe columna confiable.",
+    "Canal de origen se informa como Sin dato cuando el reporte no trae Origen Consulta.",
   ];
   $("qualityStrip").innerHTML = notes.map((note) => `<div class="quality-note">${escapeHtml(note)}</div>`).join("");
 }
@@ -5002,6 +5604,186 @@ function drawDonut(id, items) {
   `;
 }
 
+function renderJuneOperationsClose(rows) {
+  const monthRows = rows.filter(isValidJuneOperation);
+  const days = buildJuneCalendar(monthRows);
+  const totalOps = monthRows.length;
+  const totalAmount = sum(monthRows);
+  const avgOps = totalOps / days.length;
+  const avgAmount = totalAmount / days.length;
+  const sellers = groupOperationsBySeller(monthRows);
+  const bestOpsSeller = sellers[0];
+  const bestAmountSeller = [...sellers].sort((a, b) => b.amount - a.amount)[0];
+  const topOpsDay = [...days].sort((a, b) => b.count - a.count || b.amount - a.amount)[0];
+  const topAmountDay = [...days].sort((a, b) => b.amount - a.amount || b.count - a.count)[0];
+  const zeroDays = days.filter((day) => day.count === 0).length;
+  const lowDays = lowActivityDays(days, avgOps, avgAmount);
+
+  $("opsCloseCount").textContent = `${formatNumber(totalOps)} operaciones válidas`;
+  const kpis = [
+    ["Promedio real diario de operaciones", formatDecimal(avgOps), "Total de operaciones válidas / 30 días"],
+    ["Promedio real diario vendido", money(avgAmount), "Monto válido de junio / 30 días"],
+    ["Mejor vendedor por operaciones", bestOpsSeller ? `${bestOpsSeller.key} · ${formatNumber(bestOpsSeller.count)}` : "Sin dato", "Ranking por cantidad"],
+    ["Mejor vendedor por monto", bestAmountSeller ? `${bestAmountSeller.key} · ${money(bestAmountSeller.amount)}` : "Sin dato", "Ranking por importe"],
+    ["Día más productivo por operaciones", topOpsDay ? `${formatShortDate(topOpsDay.date)} · ${formatNumber(topOpsDay.count)}` : "Sin dato", "Mayor cantidad diaria"],
+    ["Día más productivo por monto", topAmountDay ? `${formatShortDate(topAmountDay.date)} · ${money(topAmountDay.amount)}` : "Sin dato", "Mayor importe diario"],
+    ["Días con cero operaciones", formatNumber(zeroDays), "Dentro de junio 2026"],
+    ["Días con baja actividad", formatNumber(lowDays.length), "Bajo el promedio real del mes"],
+  ];
+  $("opsCloseKpis").innerHTML = kpis.map(([title, value, foot]) => `
+    <article class="kpi">
+      <span>${escapeHtml(title)}</span>
+      <strong>${escapeHtml(value)}</strong>
+      <small>${escapeHtml(foot)}</small>
+    </article>
+  `).join("");
+
+  drawOperationsSellerBars(sellers);
+  drawMetricLine("opsDailyLine", { Junio: days.map((day) => ({ day: day.day, amount: day.count })) }, "Operaciones diarias", formatNumber);
+  drawMetricLine("opsDailyAmountLine", { Junio: days.map((day) => ({ day: day.day, amount: day.amount })) }, "Monto diario vendido", money);
+  renderOpsSellerRanking(sellers);
+  renderOpsProductiveDays(days);
+  renderOpsLowActivityDays(lowDays, avgOps, avgAmount);
+}
+
+function isValidJuneOperation(row) {
+  if (row.period !== "Junio") return false;
+  if (!row.date || !row.date.startsWith("2026-06")) return false;
+  if (!row.amount || row.amount <= 0) return false;
+  const status = removeAccents(row.status).toLowerCase();
+  return !/(anulad|cancelad|rechazad|duplicad|sin efecto)/.test(status);
+}
+
+function buildJuneCalendar(rows) {
+  const map = new Map();
+  for (let day = 1; day <= 30; day += 1) {
+    const date = `2026-06-${String(day).padStart(2, "0")}`;
+    map.set(date, { date, day, count: 0, amount: 0 });
+  }
+  rows.forEach((row) => {
+    const current = map.get(row.date);
+    if (!current) return;
+    current.count += 1;
+    current.amount += row.amount;
+  });
+  return [...map.values()];
+}
+
+function groupOperationsBySeller(rows) {
+  const map = new Map();
+  rows.forEach((row) => {
+    const item = map.get(row.seller) || { key: row.seller, count: 0, amount: 0 };
+    item.count += 1;
+    item.amount += row.amount;
+    map.set(row.seller, item);
+  });
+  return [...map.values()].sort((a, b) => b.count - a.count || b.amount - a.amount);
+}
+
+function lowActivityDays(days, avgOps, avgAmount) {
+  return days
+    .map((day) => {
+      const reasons = [];
+      if (day.count === 0) reasons.push("Sin operaciones");
+      else if (day.count < avgOps) reasons.push("Bajo promedio de operaciones");
+      if (day.amount < avgAmount) reasons.push("Bajo promedio de monto");
+      return { ...day, reasons };
+    })
+    .filter((day) => day.reasons.length)
+    .sort((a, b) => a.count - b.count || a.amount - b.amount);
+}
+
+function drawOperationsSellerBars(items) {
+  const container = $("opsSellerBars");
+  if (!items.length) {
+    container.innerHTML = `<div class="empty">Sin operaciones válidas para el filtro actual</div>`;
+    return;
+  }
+  const visible = items.slice(0, 8);
+  const max = Math.max(...visible.map((item) => item.count), 1);
+  container.innerHTML = `<div class="single-bars">${visible.map((item) => `
+    <div class="single-bar-row">
+      <div class="compare-name" title="${escapeHtml(item.key)}">${escapeHtml(item.key)}</div>
+      <div class="track" title="${formatNumber(item.count)} operaciones"><div class="fill jun" style="width:${(item.count / max) * 100}%"></div></div>
+      <div class="compare-value">
+        <span class="period-value period-jun">${formatNumber(item.count)} ops</span>
+        <small>${money(item.amount)}</small>
+      </div>
+    </div>
+  `).join("")}</div>`;
+}
+
+function drawMetricLine(id, series, title, formatter) {
+  const container = $(id);
+  const allPoints = Object.values(series).flat();
+  if (!allPoints.length) {
+    container.innerHTML = `<div class="empty">Sin datos para el filtro actual</div>`;
+    return;
+  }
+  const width = 900;
+  const height = 270;
+  const pad = { top: 20, right: 28, bottom: 38, left: 70 };
+  const maxDay = Math.max(...allPoints.map((p) => p.day), 30);
+  const maxValue = Math.max(...allPoints.map((p) => p.amount), 1);
+  const x = (day) => pad.left + ((day - 1) / Math.max(maxDay - 1, 1)) * (width - pad.left - pad.right);
+  const y = (value) => height - pad.bottom - (value / maxValue) * (height - pad.top - pad.bottom);
+  const paths = Object.entries(series).map(([period, points], index) => {
+    const color = period === "Mayo" ? "#216b9b" : "#147a57";
+    const poly = points.map((point) => `${x(point.day)},${y(point.amount)}`).join(" ");
+    const dots = points.map((point) => `<circle cx="${x(point.day)}" cy="${y(point.amount)}" r="3" fill="${color}"><title>${period} día ${point.day}: ${formatter(point.amount)}</title></circle>`).join("");
+    return `<polyline points="${poly}" fill="none" stroke="${color}" stroke-width="3"></polyline>${dots}<text x="${width - 118}" y="${24 + index * 18}" fill="${color}" class="axis">${period}</text>`;
+  }).join("");
+  const ticks = [1, 5, 10, 15, 20, 25, 30];
+  container.innerHTML = `
+    <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${title}">
+      <line x1="${pad.left}" y1="${height - pad.bottom}" x2="${width - pad.right}" y2="${height - pad.bottom}" stroke="#d8e1e5"></line>
+      <line x1="${pad.left}" y1="${pad.top}" x2="${pad.left}" y2="${height - pad.bottom}" stroke="#d8e1e5"></line>
+      <text class="axis" x="8" y="${pad.top + 5}">${formatter(maxValue)}</text>
+      ${ticks.map((day) => `<text class="axis" x="${x(day)}" y="${height - 12}" text-anchor="middle">${day}</text>`).join("")}
+      ${paths}
+    </svg>
+  `;
+}
+
+function renderOpsSellerRanking(items) {
+  $("opsSellerRanking").innerHTML = `
+    <thead><tr><th>Vendedor</th><th class="num">Operaciones</th><th class="num">Monto vendido</th><th class="num">Participación ops</th></tr></thead>
+    <tbody>
+      ${items.map((item) => {
+        const total = items.reduce((acc, row) => acc + row.count, 0) || 1;
+        return `<tr><td>${escapeHtml(item.key)}</td><td class="num">${formatNumber(item.count)}</td><td class="num">${money(item.amount)}</td><td class="num">${percent(item.count / total)}</td></tr>`;
+      }).join("")}
+    </tbody>
+  `;
+}
+
+function renderOpsProductiveDays(days) {
+  const ranked = [...days].sort((a, b) => b.count - a.count || b.amount - a.amount).slice(0, 10);
+  $("opsProductiveDays").innerHTML = `
+    <thead><tr><th>Fecha</th><th class="num">Operaciones</th><th class="num">Monto vendido</th></tr></thead>
+    <tbody>${ranked.map((day) => `<tr><td>${formatShortDate(day.date)}</td><td class="num">${formatNumber(day.count)}</td><td class="num">${money(day.amount)}</td></tr>`).join("")}</tbody>
+  `;
+}
+
+function renderOpsLowActivityDays(days, avgOps, avgAmount) {
+  const visible = days.slice(0, 12);
+  $("opsLowActivityDays").innerHTML = `
+    <thead><tr><th>Fecha</th><th class="num">Operaciones</th><th class="num">Monto</th><th class="num">Brecha ops</th><th class="num">Brecha monto</th><th>Alerta</th></tr></thead>
+    <tbody>
+      ${visible.map((day) => `
+        <tr>
+          <td>${formatShortDate(day.date)}</td>
+          <td class="num">${formatNumber(day.count)}</td>
+          <td class="num">${money(day.amount)}</td>
+          <td class="num">${formatDecimal(day.count - avgOps)}</td>
+          <td class="num">${money(day.amount - avgAmount)}</td>
+          <td>${escapeHtml(day.reasons.join(" · "))}</td>
+        </tr>
+      `).join("")}
+    </tbody>
+  `;
+}
+
 function renderCommissionModule(rows) {
   const rowsByPeriod = commissionRows(rows);
   const totalCommission = rowsByPeriod.reduce((acc, row) => acc + row.commission, 0);
@@ -5196,7 +5978,7 @@ function renderOperationsTable(rows) {
     ["seller", "Vendedor"],
     ["line", "Línea"],
     ["affinity", "Grupo de afinidad"],
-    ["provider", "Proveedor"],
+    ["provider", "Canal de origen"],
     ["amount", "Importe"],
     ["status", "Estado"],
     ["commissionable", "Comisiona"],
@@ -5245,7 +6027,7 @@ function compare(a, b, key, dir) {
 }
 
 function exportCsv(rows) {
-  const cols = ["Fecha", "Cliente", "Vendedor", "Línea", "Grupo de afinidad", "Proveedor", "Importe", "Estado", "Comisiona", "Motivo de exclusión", "% comisión", "Comisión estimada"];
+  const cols = ["Fecha", "Cliente", "Vendedor", "Línea", "Grupo de afinidad", "Canal de origen", "Importe", "Estado", "Comisiona", "Motivo de exclusión", "% comisión", "Comisión estimada"];
   const commissionMap = new Map(commissionRows(rows).map((row) => [`${row.period}|${row.seller}`, row]));
   const lines = rows.map((row) => {
     const commission = commissionMap.get(`${row.period}|${row.seller}`);
@@ -5308,6 +6090,10 @@ function signedPercent(value) {
 
 function formatNumber(value) {
   return new Intl.NumberFormat("es-AR").format(value || 0);
+}
+
+function formatDecimal(value) {
+  return new Intl.NumberFormat("es-AR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(value || 0);
 }
 
 function formatShortDate(value) {
@@ -5413,6 +6199,67 @@ function escapeHtml(value) {
           </div>
           <div id="cumulativeChart" class="chart"></div>
         </article>
+      </section>
+
+      <section class="operations-close-block">
+        <div class="section-title">
+          <div>
+            <p class="eyebrow">Análisis de Operaciones - Cierre Junio</p>
+            <h2>Actividad diaria, vendedores y días de baja operación</h2>
+          </div>
+          <span id="opsCloseCount" class="soft-pill">0 operaciones</span>
+        </div>
+        <div class="operations-kpis" id="opsCloseKpis"></div>
+        <section class="chart-grid">
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Operaciones por vendedor</h3>
+              <span>Junio</span>
+            </div>
+            <div id="opsSellerBars" class="compare-list"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Evolución diaria de operaciones</h3>
+              <span>Cantidad</span>
+            </div>
+            <div id="opsDailyLine" class="chart"></div>
+          </article>
+          <article class="panel wide">
+            <div class="panel-head">
+              <h3>Evolución diaria del monto vendido</h3>
+              <span>Importe</span>
+            </div>
+            <div id="opsDailyAmountLine" class="chart"></div>
+          </article>
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Ranking de vendedores por operaciones</h3>
+              <span>Cantidad y monto</span>
+            </div>
+            <div class="table-scroll">
+              <table id="opsSellerRanking" class="data-table compact-table"></table>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Ranking de días más productivos</h3>
+              <span>Operaciones y monto</span>
+            </div>
+            <div class="table-scroll">
+              <table id="opsProductiveDays" class="data-table compact-table"></table>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-head">
+              <h3>Días con baja actividad</h3>
+              <span>Contra promedio real</span>
+            </div>
+            <div class="table-scroll">
+              <table id="opsLowActivityDays" class="data-table compact-table"></table>
+            </div>
+          </article>
+        </section>
       </section>
 
       <section class="commission-block">
